@@ -15,12 +15,16 @@ public class AgentSpawner : MonoBehaviour
     {
         Random.InitState((int)DateTime.Now.Ticks);
         Debug.Log("Destination");
-        // To choose the map corner where to place the GameObjects
+        
+        // To choose one of the four the map corner where to place the GameObjects
         var xZone = Random.Range(1, 3);
         var zZone = Random.Range(1, 3);
+        
         GameObject destination = Instantiate(destinationPrefab, GetRandomPosition(xZone, zZone, true), Quaternion.identity);
         Debug.Log("Agent");
-        agent.transform.position = GetRandomPosition(xZone%2+1, zZone%2+1 , false); // Obtains always the opposite corner wrt the destination
+        
+        // Will always be the opposite corner wrt the destination
+        agent.transform.position = GetRandomPosition(xZone%2+1, zZone%2+1 , false); 
         agent.GetComponent<GoSomewhere>().destination = destination.transform;
         
     }
@@ -50,10 +54,11 @@ public class AgentSpawner : MonoBehaviour
             randomPosition.y = terrain.SampleHeight(randomVector)+offSetHeight;
       
             if (destination)
+                //to be sure the agent will be able to reach destination when water starts rising again
                 minLimit = randomPosition.y <= water.minWaterHeight + 4;
-            //to be sure the agent will be able to reach destination when water starts rising again
-            else
+            else // the agent has no problem because can move
                 minLimit = randomPosition.y <= water.minWaterHeight;
+            
             maxLimit = randomPosition.y >= water.maxWaterHeight;
           
         } while ( minLimit || maxLimit);

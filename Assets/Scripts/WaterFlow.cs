@@ -30,10 +30,13 @@ public class WaterFlow : MonoBehaviour
     void FixedUpdate()
     {
         currentHeight = transform.position.y;
+        
+        //To check if plane has to go up or down
         if (currentHeight >= maxWaterHeight)
             growing = false;
         if (currentHeight <= minWaterHeight)
             growing = true;
+        
         if (growing)
         {
             water.position += velocity * Time.deltaTime;
