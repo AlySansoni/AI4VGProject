@@ -32,7 +32,7 @@ public class AgentSpawner : MonoBehaviour
         Random.InitState((int)DateTime.Now.Ticks);
 
         Vector3 dim = terrain.terrainData.size;
-        Debug.Log("xZone " + xZone + " zZone " + zZone);
+        
         do
         {   
             if (xZone == 1)       
@@ -49,7 +49,8 @@ public class AgentSpawner : MonoBehaviour
             randomPosition.y = terrain.SampleHeight(randomVector)+offSetHeight;
       
             if (destination)
-                minLimit = randomPosition.y <= water.minWaterHeight + 2;
+                minLimit = randomPosition.y <= water.minWaterHeight + 4;
+            //to be sure the agent will be able to reach destination when water starts rising again
             else
                 minLimit = randomPosition.y <= water.minWaterHeight;
             maxLimit = randomPosition.y >= water.maxWaterHeight;
