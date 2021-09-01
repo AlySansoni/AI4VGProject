@@ -1371,7 +1371,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: GAME OVER
+  m_Text: YOU WIN!
 --- !u!222 &1847753956
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1475,7 +1475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1687376061}
   smoothSpeed: 0.125
-  offset: {x: -15, y: 12, z: -15}
+  offset: {x: -15, y: 15, z: -15}
 --- !u!81 &2089644404
 AudioListener:
   m_ObjectHideFlags: 0

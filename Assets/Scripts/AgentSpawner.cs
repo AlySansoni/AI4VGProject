@@ -15,6 +15,7 @@ public class AgentSpawner : MonoBehaviour
     {
         Random.InitState((int)DateTime.Now.Ticks);
         Debug.Log("Destination");
+        // To choose the map corner where to place the GameObjects
         var xZone = Random.Range(1, 3);
         var zZone = Random.Range(1, 3);
         GameObject destination = Instantiate(destinationPrefab, GetRandomPosition(xZone, zZone, true), Quaternion.identity);

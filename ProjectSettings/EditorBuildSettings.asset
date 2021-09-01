@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scene/PerlinWalk.unity
+    guid: 2408124cd3c92b24aa56c04b8c1290cd
   m_configObjects: {}
