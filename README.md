@@ -1,6 +1,6 @@
 # AI4VGProject
 
-This is the project for the exam of the Artificial Intelligence for Videogames class. 
+This project was done with University of Milan for the exam "Artificial Intelligence for Videogames". 
 
 It was done with Unity 2020.3.3
 
