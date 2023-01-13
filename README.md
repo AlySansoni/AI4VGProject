@@ -1,4 +1,4 @@
-# AI4VGProject
+# Artificial Intelligence for Videogames Project
 
 This project was done with University of Milan for the exam "Artificial Intelligence for Videogames". 
 
